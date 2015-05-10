@@ -1,0 +1,14 @@
+ClanSystem.clan.delete			can use command "/clan delete"
+ClanSystem.clan.info			can use command "/clan info"
+ClanSystem.clan.create 			can use command "/clan create"
+ClanSystem.clan.leave			can use command "/clan leave"
+ClanSystem.clan.join			can use command "/clan join"
+ClanSystem.clan.uninvite		can use command "/clan uninvite"
+ClanSystem.clan.invite			can use command "/clan invite"
+ClanSystem.clan.home			can use command "/clan home"
+ClanSystem.clan.sethome			can use command "/clan sethome"
+ClanSystem.clan.kick			can use command "/clan kick"
+ClanSystem.clan.deleteother		can use command "/clan deleteother"
+
+## This Plugin need CraftBukkit
+## This Plugin needs ~0,3gb ram(with 100 Clans)

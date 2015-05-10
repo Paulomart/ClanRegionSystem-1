@@ -1,0 +1,7 @@
+name: ClanSystem
+version: Alpha-1.7U3
+main: me.germanubuntu.clansystem.ClanSystem
+author: GermanUbuntu
+commands:
+  clan:
+    usage: /clan <args>
