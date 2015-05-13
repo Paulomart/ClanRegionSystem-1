@@ -1,9 +1,19 @@
 package me.germanubuntu.clansystem.socket;
 
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.io.PrintWriter;
 import java.net.InetSocketAddress;
 import java.net.ServerSocket;
 import java.net.Socket;
+
+import org.bukkit.Bukkit;
+import org.json.simple.JSONObject;
+
+import me.germanubuntu.clansystem.socket.event.JsonServerMessageEvent;
+import me.germanubuntu.clansystem.util.JsonUtil;
 
 public class JsonSocketServer extends Thread{
 	
@@ -16,6 +26,7 @@ public class JsonSocketServer extends Thread{
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		Bukkit.getLogger().info("ClanSystemCosaXNetwork starting...");
 	}
 	
 	public void startServer(String host, int port) throws IOException{
@@ -29,11 +40,34 @@ public class JsonSocketServer extends Thread{
 		this.start();
 	}
 	
+	public void stopServer() throws IOException{
+		server.close();
+		this.stop();
+	}
+	
 	@Override
 	public void run() {
 		while(true){
 			try {
 				Socket client = server.accept();
+				
+				BufferedReader reader = new BufferedReader(new InputStreamReader(client.getInputStream()));
+				PrintWriter writer = new PrintWriter(new OutputStreamWriter(client.getOutputStream()));
+				
+				String readed = reader.readLine();
+				JSONObject jsonObject = JsonUtil.getJSONObject(readed);
+				if(jsonObject != null){
+					JsonServerMessageEvent event = new JsonServerMessageEvent(jsonObject, client, writer, reader);
+				
+					Bukkit.getPluginManager().callEvent(event);
+				
+					writer.write(event.getReturnMessage()+"\n");
+					writer.flush();
+				}
+				
+				writer.close();
+				reader.close();
+				client.close();
 				
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
@@ -41,5 +75,7 @@ public class JsonSocketServer extends Thread{
 			}
 		}
 	}
-
+	
+	
+	
 }

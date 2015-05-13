@@ -12,3 +12,18 @@ ClanSystem.clan.deleteother		can use command "/clan deleteother"
 
 ## This Plugin need CraftBukkit
 ## This Plugin needs ~0,3gb ram(with 100 Clans)
+
+
+
+JsonSocketServer
+{"clan":"Clan Name","command":"getOwnerName","salt":"SALT"} 
+	RET {"Owner":"Owner Name"}
+	
+{"clan":"Clan Name","command":"getOwnerUUID","salt":"SALT"} 
+	RET {"Owner":"Owner UUID"}
+	
+{"clan":"Clan Name","command":"getClanUUID","salt":"SALT"}
+	RET {"UUID":"Clan UUID"}
+
+{"clan":"Clan UUID","command":"getClanName","salt":"SALT"}
+	RET {"clan":"Clan Name"}

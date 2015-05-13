@@ -39,7 +39,7 @@ public class Config {
 			config.set("Clan.MaxClans", 999999999);
 			config.set("Clan.MaxNameLenght", 8);
 			config.set("Clan.MaxContractionLenght", 4);
-			config.set("SocketServer", false);
+			config.set("SocketServer.Usage", false);
 			config.set("SocketServer.Port", 56571);
 			config.set("SocketServer.Host", "*");
 			Random r = new SecureRandom();
@@ -57,7 +57,7 @@ public class Config {
 		config = YamlConfiguration.loadConfiguration(file);
 		port = config.getInt("SocketServer.Port");
 		host = config.getString("SocketServer.Host");
-		socketServer = config.getBoolean("SocketServer");
+		socketServer = config.getBoolean("SocketServer.Usage");
 		salt = config.getString("SocketServer.Salt");
 		maxClans = config.getInt("Clan.MaxClans");
 		maxNameLenght = config.getInt("Clan.MaxNameLenght");
