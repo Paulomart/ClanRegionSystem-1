@@ -63,7 +63,7 @@ public class ClanSystem extends JavaPlugin {
 
 	@Override
 	public void onDisable() {
-		if (getPluginConfig().isSocketServer()) {
+		if (jsonSocketServer != null) {
 			try {
 				jsonSocketServer.stopServer();
 			} catch (IOException e) {
