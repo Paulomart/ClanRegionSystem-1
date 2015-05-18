@@ -5,6 +5,7 @@
 	<artifactId>ClanSystem</artifactId>
 	<version>Alpha-1.7U4</version>
 	<build>
+  		<finalName>ClanCoreSystem-${version}B${build.number}</finalName>
 		<sourceDirectory>src</sourceDirectory>
 		<resources>
 			<resource>
