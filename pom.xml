@@ -43,7 +43,7 @@
 		<dependency>
 			<groupId>me.germanubuntu</groupId>
 			<artifactId>ClanSystem</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
+			<version>1.7U4</version>
 		</dependency>
 	</dependencies>
 </project>
