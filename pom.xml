@@ -2,18 +2,12 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>me.germanubuntu</groupId>
-	<artifactId>ClanRegionSystem</artifactId>
-	<version>1.7U4</version>
+	<artifactId>ClanRegion</artifactId>
+	<version>1.5U3</version>
 	<build>
-  		<finalName>ClanRegionSystem-${version}B${build.number}</finalName>
+		<finalName>ClanRegionSystem-${version}B${build.number}</finalName>
 		<sourceDirectory>src</sourceDirectory>
 		<resources>
-			<resource>
-				<directory>src/</directory>
-				<includes>
-					<include>plugin.yml</include>
-				</includes>
-			</resource>
 			<resource>
 				<directory>src</directory>
 				<excludes>
@@ -43,13 +37,13 @@
 		<dependency>
 			<groupId>org.spigotmc</groupId>
 			<artifactId>spigot-api</artifactId>
-			<version>1.8.3-R0.1-SNAPSHOT</version>
+			<version>1.8-R0.1-SNAPSHOT</version>
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
-			<groupId>org.json</groupId>
-			<artifactId>json</artifactId>
-			<version>20141113</version>
+			<groupId>me.germanubuntu</groupId>
+			<artifactId>ClanSystem</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 	</dependencies>
 </project>

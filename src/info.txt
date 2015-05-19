@@ -1,29 +1,3 @@
-ClanSystem.clan.delete			can use command "/clan delete"
-ClanSystem.clan.info			can use command "/clan info"
-ClanSystem.clan.create 			can use command "/clan create"
-ClanSystem.clan.leave			can use command "/clan leave"
-ClanSystem.clan.join			can use command "/clan join"
-ClanSystem.clan.uninvite		can use command "/clan uninvite"
-ClanSystem.clan.invite			can use command "/clan invite"
-ClanSystem.clan.home			can use command "/clan home"
-ClanSystem.clan.sethome			can use command "/clan sethome"
-ClanSystem.clan.kick			can use command "/clan kick"
-ClanSystem.clan.deleteother		can use command "/clan deleteother"
-
-## This Plugin need CraftBukkit
-## This Plugin needs ~0,3gb ram(with 100 Clans)
-
-
-
-JsonSocketServer
-{"clan":"Clan Name","command":"getOwnerName","salt":"SALT"} 
-	RET {"Owner":"Owner Name"}
-	
-{"clan":"Clan Name","command":"getOwnerUUID","salt":"SALT"} 
-	RET {"Owner":"Owner UUID"}
-	
-{"clan":"Clan Name","command":"getClanUUID","salt":"SALT"}
-	RET {"UUID":"Clan UUID"}
-
-{"clan":"Clan UUID","command":"getClanName","salt":"SALT"}
-	RET {"clan":"Clan Name"}
+ClanSystem.clan.claim				can use command "/clan claim"
+ClanSystem.clan.addantiregion		can use command "/clan addAntiRegion"
+ClanSystem.clan.chunkinfo			can use command "/clan chunkinfo"

@@ -1,7 +1,5 @@
-name: ClanSystem
-version: 1.7U4
-main: me.germanubuntu.clansystem.ClanSystem
+name: ClanRegionSystem
+version: 1.5U3
+main: me.germanubuntu.clanregion.ClanRegionSystem
 author: GermanUbuntu
-commands:
-  clan:
-    usage: /clan <args>
+depend: [ClanSystem]
